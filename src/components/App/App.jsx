@@ -9,7 +9,7 @@ const LS_CONTACTS = 'contacts';
 
 export const App = () => {
   const contactsLS = JSON.parse(localStorage.getItem(LS_CONTACTS));
-  const [contacts, setContacts] = useState([...contactsLS]);
+  const [contacts, setContacts] = useState(()=>[...contactsLS]);
   const [filter, setFilter] = useState('');
 
   
